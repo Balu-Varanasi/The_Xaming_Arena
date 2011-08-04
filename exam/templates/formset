@@ -1,0 +1,20 @@
+
+<form name = "exam_form" action ="." method ="POST">
+
+<tr>
+
+	<th><label for="id_form-0-options_0">Options:</label></th>
+
+	<td>
+		<ul>
+			<li><label for="id_form-0-options_0"><input type="radio" id="id_form-0-options_0" value="A" name="form-0-options" /> A</label></li>
+			<li><label for="id_form-0-options_1"><input type="radio" id="id_form-0-options_1" value="B" name="form-0-options" /> B</label></li>
+			<li><label for="id_form-0-options_2"><input type="radio" id="id_form-0-options_2" value="C" name="form-0-options" /> C</label></li>
+			<li><label for="id_form-0-options_3"><input type="radio" id="id_form-0-options_3" value="D" name="form-0-options" /> D</label></li>
+		</ul>
+	</td>
+</tr>
+
+
+<input type="submit" value="submit" />
+</form>

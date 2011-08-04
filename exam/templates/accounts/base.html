@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<title>{{title}}</title>
+<link rel="stylesheet" type="text/css" href="/static/style.css" />
+</head>
+
+<body>
+
+<!-- Header Starting -->
+<div id="page">
+	<div id="header">
+			<a href="#"><h1>The Xaming Arena...</h1></a>
+			<div class="description">{{description}}</div>
+	</div>
+<!--Header Ending -->
+
+<!--Menu Bar-->
+	<div id="menulinks">
+		<a class="active" href="#"><span>Home</span></a>	
+		<div class="menulines"></div>
+		<a href="/exam/profile/"><span>Profile</span></a>
+		<div class="menulines"></div>
+		<a href="/exam/questions/"><span>Subject</span></a>
+		<div class="menulines"></div>
+		<a href="/exam/exam/"><span>Exams</span></a>
+		<div class="menulines"></div>
+		<a href="/exam/sub_report/"><span>Reports</span></a>
+		<div class="menulines"></div>
+		<a href="#"><span>Comments</span></a>
+		<div class="menulines"></div>
+		<a href="/exam/logout/"><span>Logout</span></a>
+		<div class="menulines"></div>
+
+	</div>
+<!-- Endof Menu Bar-->
+
+<!-- Main Content Area -->
+
+	<div id="mainarea">
+
+
+	<div id="contentarea">	
+		<div class="content">
+
+	{%block content %}
+	{%endblock%}
+		</div>
+	</div>
+
+<!--Endof Main-->
+<!--Start of sidebar-->
+
+	<div id="sidebar">
+
+{%block sidebar%}
+
+{%if news%}
+		<div class="sidebarheader">NEWS</div>
+		<div class="content">
+		<div class="newsdate">{{news_date}}</div>
+		{{news}}
+		<br/><br/>
+
+{%endif%}
+{%if testimonals%}
+	
+		<div class="sidebarheader">TESTIMONIALS</div>
+		<div class="content">
+		{{testimonals}}
+		</div>
+{%endif%}
+	</div>
+{%endblock%}
+	</div>
+<!--End of SideBar-->
+<!--Start of Footer-->
+	
+	<div id="footer">
+    </div>
+<!--End of Footer-->
+
+</div>
+
+</body>
+
+</html>
