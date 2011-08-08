@@ -1,0 +1,7 @@
+
+local_settings.py
+_static
+_templates
+_build
+*pyc
+dev.db
