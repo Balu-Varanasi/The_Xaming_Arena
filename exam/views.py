@@ -21,49 +21,49 @@ from The_Xaming_Arena import settings
 
 @csrf_protect
 @login_required
-def home(request, template_name = 'accounts/home.html'):
+def home(request, template_name = 'home.html'):
         """ This renders the home page"""
 	content = {}
 	return render_to_response(template_name,{'content':content})
 
 @login_required
-def topics(request, template_name = 'accounts/topics.html'):
+def topics(request, template_name = 'topics.html'):
         """ This function lists all the subjects that are present in the database"""
 	topics = Subject.objects.all()
 	return render_to_response(template_name, {"topics":topics})
 
 @login_required
-def select_topic(request, template_name = 'accounts/select_topic.html'):
+def select_topic(request, template_name = 'select_topic.html'):
         """ This function renders a page which also displays all the subjects"""
 	topics = Subject.objects.all()
 	return render_to_response(template_name, {"topics":topics})
 
 @login_required
-def sub_rep(request,template_name='accounts/sub_res.html'):
+def sub_rep(request,template_name='sub_res.html'):
 	topics = Subject.objects.all()
 	return render_to_response(template_name,{"topics":topics})
 
 @login_required
-def reports(request, sub_code,template_name = 'accounts/reports.html'):
+def reports(request, sub_code,template_name = 'reports.html'):
         """ This returns a page which contains all the previous results of a purticular user"""
 	reports = Exam.objects.filter(user=request.user)
 	reports = reports.filter(subject=sub_code)
 	return render_to_response(template_name, {"reports":reports})
 
 @login_required
-def view_questions(request, sub_code, template_name = 'accounts/view_questions.html'):
+def view_questions(request, sub_code, template_name = 'view_questions.html'):
         """ This returns a page which contains all the questions in the database to the subject selected"""
 	questions = Question.objects.filter(subject_code=sub_code)
 	return render_to_response(template_name, RequestContext(request,{"questions":questions}))
 
 @login_required
-def profile(request, template_name='accounts/profile.html'):
+def profile(request, template_name='profile.html'):
         """ This function returns a page which contains the profile of the student"""
 	return render_to_response(template_name)
 	
 @csrf_protect
 @login_required
-def start_exam(request, sub_code, template_name = 'accounts/start_exam.html',answer_form=formset_factory(AnswerForm, formset=BaseAnswerFormSet, extra=10) ,current_app=None, extra_context=None,after_exam = 'accounts/exam_complete.html'):
+def start_exam(request, sub_code, template_name = 'start_exam.html',answer_form=formset_factory(AnswerForm, formset=BaseAnswerFormSet, extra=10) ,current_app=None, extra_context=None,after_exam = 'exam_complete.html'):
 
 	if request.method == "POST":
 		answer_formset = answer_form(request.POST)

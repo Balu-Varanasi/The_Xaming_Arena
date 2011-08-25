@@ -1,44 +1,46 @@
 from django.conf.urls.defaults import *
 
+from The_Xaming_Arena import exam
+
 urlpatterns = patterns('',
                        (r'^login/$', 
                         'django.contrib.auth.views.login', 
-                        {'template_name': 'accounts/login.html'}),
+                        {'template_name': 'login.html'}),
 
-			(r'^profile/$','The_Xaming_Arena.exam.views.profile',
-			{'template_name':'accounts/profile.html'}),
+			(r'^profile/$','exam.views.profile',
+			{'template_name':'profile.html'}),
 
-		       (r'^home/$', 'The_Xaming_Arena.exam.views.home',
-			{'template_name': 'accounts/home.html'}),
+		       (r'^home/$', 'exam.views.home',
+			{'template_name': 'home.html'}),
 
-			(r'^questions/$','The_Xaming_Arena.exam.views.topics',
-			{'template_name':'accounts/topics.html'}),
+			(r'^questions/$','exam.views.topics',
+			{'template_name':'topics.html'}),
 
-			(r'questions/(?P<sub_code>[^/]+)/view_questions/$','The_Xaming_Arena.exam.views.view_questions',
-			{'template_name':'accounts/view_questions.html'}),
+			(r'questions/(?P<sub_code>[^/]+)/view_questions/$','exam.views.view_questions',
+			{'template_name':'view_questions.html'}),
 
-			(r'^sub_report/$','The_Xaming_Arena.exam.views.sub_rep',
-			{'template_name':'accounts/sub_res.html'}),
+			(r'^sub_report/$','exam.views.sub_rep',
+			{'template_name':'sub_res.html'}),
 
-			(r'questions/(?P<sub_code>[^/]+)/reports/$','The_Xaming_Arena.exam.views.reports',
-			{'template_name':'accounts/reports.html'}),
+			(r'questions/(?P<sub_code>[^/]+)/reports/$','exam.views.reports',
+			{'template_name':'reports.html'}),
 
                        (r'^logout/$', 
                         'django.contrib.auth.views.logout', 
-                        {'template_name': 'accounts/logged_out.html'}),
+                        {'template_name': 'logged_out.html'}),
 
-			(r'^exam/$', 'The_Xaming_Arena.exam.views.select_topic',
-			{'template_name':'accounts/select_topic.html'}),
+			(r'^exam/$', 'exam.views.select_topic',
+			{'template_name':'select_topic.html'}),
 
-			(r'^exam/(?P<sub_code>[^/]+)/start_exam/$','The_Xaming_Arena.exam.views.start_exam',
-			{'template_name':'accounts/start_exam.html'}),
+			(r'^exam/(?P<sub_code>[^/]+)/start_exam/$','exam.views.start_exam',
+			{'template_name':'start_exam.html'}),
 
                        (r'^password_change/$', 
                         'django.contrib.auth.views.password_change', 
-                        {'template_name': 'accounts/password_change_form.html'}),
+                        {'template_name': 'password_change_form.html'}),
 
                        (r'^password_change/done/$', 
                         'django.contrib.auth.views.password_change_done', 
-                        {'template_name': 'accounts/password_change_done.html'}),
+                        {'template_name': 'password_change_done.html'}),
 
   )
