@@ -56,7 +56,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = 'C:/msysgit/msysgit/The_Xaming_Arena/exam/static/'
+STATIC_ROOT = 'C:/Users/Balu Varanasi/git/The_Xaming_Arena/exam/static/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -72,7 +72,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    'C:/msysgit/msysgit/The_Xaming_Arena/exam/templates/accounts/',
+    'C:/Users/Balu Varanasi/git/The_Xaming_Arena/exam/templates/static/',
 )
 
 
