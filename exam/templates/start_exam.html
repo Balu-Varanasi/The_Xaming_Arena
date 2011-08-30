@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+
+{%block sidebar%}
+	{%if formset%}
+	
+		<div class="sidebarheader">Answers</div>
+		<div class="content">
+		
+			<form name = "exam" action ="." method ="POST">
+
+			 	{{ formset.management_form }}
+
+				<ol>
+					{%for form in formset.forms%}
+						<li>{{form}}</li>
+
+					{%endfor%}
+				</ol>
+				<input type="hidden" name="exam_id" value= "{{exam_id}}" />
+				<input type="submit" value="submit" />
+			</form>
+		</div>
+	{%endif%}
+
+	{%if ca%}
+		You have scored <b>{{result}}</b><br />
+
+		<ol>
+
+			<li>{{ca.one}}-{{sa.one}}</li>
+			<li>{{ca.two}}--{{sa.two}}</li>
+			<li>{{ca.three}}--{{sa.three}}</li>
+			<li>{{ca.four}}--{{sa.four}}</li>
+			<li>{{ca.five}}--{{sa.five}}</li>
+			<li>{{ca.six}}--{{sa.six}}</li>
+			<li>{{ca.seven}}--{{sa.seven}}</li>
+			<li>{{ca.eight}}--{{sa.eight}}</li>
+			<li>{{ca.nine}}--{{sa.nine}}</li>
+			<li>{{ca.ten}}--{{sa.ten}}</li>
+		</ol>
+
+	{%endif%}
+
+{%endblock%}
+
+
+{%block content%}
+<ol>
+	{%for object in questions %}
+	<div>
+		
+		<li>
+			<div class="question">{{object.question}}<br /></div>
+			<div class="answers">
+			<ol type="A">	
+				<li>{{object.A}}</li>
+				<li>{{object.B}}</li>
+				<li>{{object.C}}</li>
+				<li>{{object.D}}</li>
+
+			</ol>
+			</div>
+		</li>
+	</div>
+
+	{% endfor %}
+	</ol>
+
+{%endblock%}
+
