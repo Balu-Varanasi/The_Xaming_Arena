@@ -27,5 +27,5 @@ class BaseAnswerFormSet(BaseFormSet):
 
 class AnswerForm(forms.Form):
 
-    options = forms.ChoiceField(choices=ANSWER_CHOICES,
-                                 widget=forms.RadioSelect())
+    options = forms.ChoiceField(choices = ANSWER_CHOICES,
+                                 widget = forms.RadioSelect())
