@@ -43,7 +43,7 @@ STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 STATICFILES_DIRS = (
-    '/home/balu-varanasi/workspace/The_Xaming_Arena/exam/templates/static',
+    '/home/balu-varanasi/templates/The_Xaming_Arena/static',
 )
 
 
