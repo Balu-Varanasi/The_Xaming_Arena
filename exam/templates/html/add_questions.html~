@@ -1,0 +1,28 @@
+{% extends "accounts/base.html" %}
+
+    {% block content %}
+
+        <ol>
+            {% for object in questions %}
+			
+            <li>object.question
+
+                <br />
+
+                    <ol>
+                        <li>object.option_1</li>
+                        <li>object.option_2</li>
+                        <li>object.option_3</li>
+                        <li>object.option_4</li>
+                    </ol>
+                <br />
+            
+                <hr />
+                <br />
+            </li>
+			
+			{% endfor %}
+			
+		</ol>
+		
+	{% endblock %}

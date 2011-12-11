@@ -1,6 +1,6 @@
 """url configuration for exam app"""
 
-from django.conf.urls.defaults import patterns
+from django.conf.urls.defaults import *
 
 urlpatterns = patterns('',
                        (r'^login/$',

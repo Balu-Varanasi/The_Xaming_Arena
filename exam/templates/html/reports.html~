@@ -1,0 +1,15 @@
+{% extends "/base.html" %}
+
+{% block content %}
+
+
+<table border="0" padding="4px" align="center">
+	<tr><td>Exam Id</td><td>Marks Obtained</td><td>Date</td></tr>
+	{% for object in reports%}
+		
+	<tr><td>{{ object.exam_id }}</td><td>{{ object.marks_obtained }}</td><td>{{ object.date }}</td>
+	
+	{% endfor %}
+</table>
+
+{% endblock %}

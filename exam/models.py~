@@ -3,9 +3,11 @@
 """
 
 import datetime
+import urllib
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django import forms
 
 
 class Subject(models.Model):
