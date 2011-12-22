@@ -15,7 +15,7 @@ class BaseAnswerFormSet(BaseFormSet):
             try:
                 so.append(form.cleaned_data['options'])
             except KeyError:
-                so.append('x')
+                so.append('X')
         return so
 
 

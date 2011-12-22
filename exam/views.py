@@ -153,21 +153,26 @@ def start_exam(request, sub_code,
     else:
         questions = Question.objects.filter(subject_code=sub_code)
         n = questions.count()
-        if (n < 10):
+
+        if n < 10:
             return render_to_response(template_name)
+
         m = int(math.floor(n / 10))
         position = 0
         temp_list = []
         id_list = []
+
         for object in Question.objects.filter(subject_code=sub_code):
             temp_list.append(object.id)
+
         for i in range(10):
             id_list.append(
                         temp_list[int(
                             position + math.floor(random.random() * m)
                             )]
                         )
-        position += m
+            position += m
+
         questions = Question.objects.filter(id__in=id_list)
         id_table = ExamIdClass(one=id_list[0], two=id_list[1],
                                three=id_list[2], four=id_list[3],

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% block sidebar %}
 	{% if formset %}
 	
@@ -24,22 +23,22 @@
 	{% endif %}
 
 	{% if ca %}
-		You have scored <b>{{ result }}</b><br />
 
-		<ol>
-
-			<li>{{ ca.one }}-{{ sa.one }}</li>
-			<li>{{ ca.two }}--{{ sa.two }}</li>
-			<li>{{ ca.three }}--{{ sa.three }}</li>
-			<li>{{ ca.four }}--{{ sa.four }}</li>
-			<li>{{ ca.five }}--{{ sa.five }}</li>
-			<li>{{ ca.six }}--{{ sa.six }}</li>
-			<li>{{ ca.seven }}--{{ sa.seven }}</li>
-			<li>{{ ca.eight }}--{{ sa.eight }}</li>
-			<li>{{ ca.nine }}--{{sa.nine }}</li>
-			<li>{{ ca.ten }}--{{ sa.ten }}</li>
-		</ol>
-
+	<table>
+		<tr ><th align="center">Q No</th><th>Correct Answer</th><th>Your Answer</th></tr>
+		<tr><td align="center">1</td><td align="center">{{ ca.one }}</td><td align="center">{{ sa.one }}</td></tr>
+		<tr><td align="center">2</td><td align="center">{{ ca.two }}</td><td align="center">{{ sa.two }}</td></tr>
+		<tr><td align="center">3</td><td align="center">{{ ca.three }}</td><td align="center">{{ sa.three }}</td></tr>
+		<tr><td align="center">4</td><td align="center">{{ ca.four }}</td><td align="center">{{ sa.four }}</td></tr>
+		<tr><td align="center">5</td><td align="center">{{ ca.five }}</td><td align="center">{{ sa.five }}</td></tr>
+		<tr><td align="center">6</td><td align="center">{{ ca.six }}</td><td align="center">{{ sa.six }}</td></tr>
+		<tr><td align="center">7</td><td align="center">{{ ca.seven }}</td><td align="center">{{ sa.seven }}</td></tr>
+		<tr><td align="center">8</td><td align="center">{{ ca.eight }}</td><td align="center">{{ sa.eight }}</td></tr>
+		<tr><td align="center">9</td><td align="center">{{ ca.nine }}</td><td align="center">{{sa.nine }}</td></tr>
+		<tr><td align="center">10</td><td align="center">{{ ca.ten }}</td><td align="center">{{ sa.ten }}</td></tr>
+	</table>
+	
+	<br /><h3>You have scored {{ result }}</h6><br />
 	{% endif %}
 
 {% endblock %}
@@ -49,9 +48,10 @@
 <ol>
 	{% for object in questions %}
 	<div>
-		
 		<li>
-			<div class="question">{{ object.question }}<br /></div>
+			<div class="question">{{ object.question }}
+                        </div>
+                        <br />
 			<div class="answers">
 			<ol type="A">	
 				<li>{{ object.A }}</li>
@@ -65,6 +65,5 @@
 	</div>
 
 	{% endfor %}
-	</ol>
-
+</ol>
 {% endblock %}
