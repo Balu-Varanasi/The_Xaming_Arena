@@ -25,8 +25,8 @@
 	{% if ca %}
 
 	<table>
-		<tr ><th>Q No</th><th>Correct Answer</th><th>Your Answer</th></tr>
-		<tr><td align="center" padding="10">1</td><td align="center">{{ ca.one }}</td><td align="center">{{ sa.one }}</td></tr>
+		<tr ><th align="center">Q No</th><th>Correct Answer</th><th>Your Answer</th></tr>
+		<tr><td align="center">1</td><td align="center">{{ ca.one }}</td><td align="center">{{ sa.one }}</td></tr>
 		<tr><td align="center">2</td><td align="center">{{ ca.two }}</td><td align="center">{{ sa.two }}</td></tr>
 		<tr><td align="center">3</td><td align="center">{{ ca.three }}</td><td align="center">{{ sa.three }}</td></tr>
 		<tr><td align="center">4</td><td align="center">{{ ca.four }}</td><td align="center">{{ sa.four }}</td></tr>
@@ -36,9 +36,9 @@
 		<tr><td align="center">8</td><td align="center">{{ ca.eight }}</td><td align="center">{{ sa.eight }}</td></tr>
 		<tr><td align="center">9</td><td align="center">{{ ca.nine }}</td><td align="center">{{sa.nine }}</td></tr>
 		<tr><td align="center">10</td><td align="center">{{ ca.ten }}</td><td align="center">{{ sa.ten }}</td></tr>
-
-		<tr colspan="3"><td>You have scored {{ result }}</td></tr>
 	</table>
+	
+	<br /><h3>You have scored {{ result }}</h6><br />
 	{% endif %}
 
 {% endblock %}
