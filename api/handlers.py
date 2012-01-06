@@ -7,6 +7,8 @@ from The_Xaming_Arena.exam.models import CorrectAnswers
 from The_Xaming_Arena.exam.models import SubmittedAnswers
 from The_Xaming_Arena.exam.models import Question
 
+import math
+import random
 class SubjectHandler(BaseHandler):
     
     allowed_methods = ('GET',)
@@ -78,11 +80,13 @@ class ExamHandler(BaseHandler):
 
     def read(self, request):
         
+        sub_code = "vocabulary"
+
         questions = self.question_model.objects.filter(subject_code=sub_code)
         n = questions.count()
 
         if n < 10:
-            return render_to_response(template_name)
+            return "No enough questions in database"
 
         m = int(math.floor(n / 10))
         position = 0
@@ -111,4 +115,4 @@ class ExamHandler(BaseHandler):
         id_table = self.exam_model.objects.all()
         exam_id = id_table.count()
 
-        return [exam_id, questions,]
+        return exam_id, questions
