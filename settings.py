@@ -85,6 +85,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'The_Xaming_Arena.exam',
+    'The_Xaming_Arena.api',
 )
 
 LOGGING = {
