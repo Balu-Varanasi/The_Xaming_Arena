@@ -1,6 +1,6 @@
 """ Django settings for The_Xaming_Arena project. """
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -11,11 +11,11 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'exam/database/database.db',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'the_xaming_arena',
+        'USER': 'balu',
+        'PASSWORD': 'balu',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
