@@ -6,9 +6,10 @@ from The_Xaming_Arena.exam.models import Answer
 from The_Xaming_Arena.exam.models import CorrectAnswers
 from The_Xaming_Arena.exam.models import SubmittedAnswers
 from The_Xaming_Arena.exam.models import Question
-
 import math
 import random
+
+
 class SubjectHandler(BaseHandler):
     
     allowed_methods = ('GET',)
