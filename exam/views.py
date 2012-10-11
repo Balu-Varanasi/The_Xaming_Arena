@@ -62,7 +62,7 @@ def sub_rep(request, template_name='sub_res.html'):
 def reports(request, sub_code, template_name='reports.html'):
     """
         This returns a page which contains all the previous results
-        of a purticular user
+        of a purticular user...
     """
 
     exam_reports = Exam.objects.filter(user=request.user)
