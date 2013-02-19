@@ -4,4 +4,5 @@ _templates
 _build
 *pyc
 *~
-dev.db
+*.db
+static/*
