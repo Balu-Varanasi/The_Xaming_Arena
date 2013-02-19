@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "twitter_base.html" %}
 
 {% block sidebar %}
 
