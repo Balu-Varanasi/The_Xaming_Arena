@@ -1,14 +1,14 @@
-{%extends "accounts/base.html"%}
+{% extends "base.html" %}
 
-{%block content%}
+{% block content %}
 
 <ul>
-	{% for object in topics%}
+	{% for object in topics %}
 		
-	<li>	<a href="/exam/exam/{{object.code}}/start_exam/">{{object.name}} - {{object.code}}</a></li>
+	<li>	<a href="/exam/exam/{{object.code}}/start_exam/">{{ object.name }} - {{ object.code }}</a></li>
 	
 	{% endfor %}
 	
 </ul>
 
-{%endblock%}
+{% endblock %}

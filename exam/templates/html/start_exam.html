@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+{% extends "twitter_base.html" %}
 
-{% block sidebar %}
+{% block content %}
 	{% if formset %}
 	
 		<div class="sidebarheader">Answers</div>
@@ -42,10 +42,10 @@
 	<br /><h3>You have scored {{ result }}</h6><br />
 	{% endif %}
 
-{% endblock %}
 
 
-{% block content %}
+
+
 <ol>
 	{% for object in questions %}
 	<div>
