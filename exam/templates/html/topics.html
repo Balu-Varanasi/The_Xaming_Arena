@@ -1,14 +1,10 @@
-{% extends "base.html" %}
+{% extends "twitter_base.html" %}
 
 {% block content %}
 
 <ul>
-	{% for object in topics %}
-		
-	<li>	<a href="/exam/questions/{{ object.code }}/view_questions/">{{ object.name }} - {{ object.code }}</a></li>
-	
-	{% endfor %}
-	
+    {% for object in topics %}
+       <li><a href="/exam/questions/{{ object.code }}/view_questions/">{{ object.name }} - {{ object.code }}</a></li>
+    {% endfor %}
 </ul>
-
 {% endblock %}
